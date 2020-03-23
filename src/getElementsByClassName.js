@@ -9,5 +9,5 @@ var getElementsByClassName = function (className
 
   console.log("hello world! hello pair partner Ha!")
   // your code here
-  console.log("hello world")
+
 };
