@@ -4,7 +4,9 @@
 // };
 
 // But instead we're going to implement it from scratch:
-var getElementsByClassName = function(className
+var getElementsByClassName = function (className
 ) {
+
+  console.log("hello world! hello pair partner Ha!")
   // your code here
 };
