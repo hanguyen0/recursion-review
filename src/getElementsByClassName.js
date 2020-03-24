@@ -38,7 +38,6 @@ const getElementsByClassName = function (className) {
 
   doWork(document.body)
 
-  console.log('final result ', result)
   return result
 }
 
