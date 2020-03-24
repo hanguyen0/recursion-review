@@ -3,6 +3,6 @@
 
 // but you don't so you're going to write it from scratch:
 
-var stringifyJSON = function(obj) {
+var stringifyJSON = function (obj) {
   // your code goes here
 };

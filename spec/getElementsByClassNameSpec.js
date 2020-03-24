@@ -8,19 +8,24 @@ var htmlStrings = [
   '<div><div class="somediv"><div class="innerdiv"><span class="targetClassName">yay</span></div></div></div>'
 ];
 
-describe('getElementsByClassName', function() {
+describe('getElementsByClassName', function () {
 
-  it('should match the results of calling the built-in function', function() {
+  it('should match the results of calling the built-in function', function () {
     $('body').addClass('targetClassName');
-    htmlStrings.forEach(function(htmlString) {
+    htmlStrings.forEach(function (htmlString) {
       var $rootElement = $(htmlString);
       $('body').append($rootElement);
 
       var result = getElementsByClassName('targetClassName');
+      //is array like?
       var expectedNodeList = document.getElementsByClassName('targetClassName');
+      //a real array!
       var expectedArray = Array.prototype.slice.apply(expectedNodeList);
+      console.log("result in test file", result);
+      console.log("expected array in test file", expectedArray);
       var equality = _.isEqual(result, expectedArray); // why can't we use `===` here?
-      expect(equality).to.equal(FILL_ME_IN);
+      expect(equality).to.equal(true);
+      // expect(equality).to.equal("fillmein");
 
       $rootElement.remove();
     });
